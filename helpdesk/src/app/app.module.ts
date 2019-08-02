@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { FilasComponent } from './filas/filas.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FilasComponent
   ],
   imports: [
     BrowserModule

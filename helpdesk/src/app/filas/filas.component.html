@@ -1,0 +1,7 @@
+<div class="container">
+    <h1 class="titulo">Filas</h1>
+    <ul class="filas">
+        <li *ngFor="let item of filas">{{ item.nome }}</li>  
+    </ul>
+    <button (click)="adicionarFila()">Adicionar Fila</button>
+</div>
