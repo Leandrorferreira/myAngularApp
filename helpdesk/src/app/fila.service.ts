@@ -24,4 +24,9 @@ export class FilaService {
   public getFilas() :Fila[]{
     return this.filas;
   }
+
+  //Retorna um novo Id
+  public nextId(){
+    return this.filas.length <= 0 ? 1: Math.max(... this.filas.map(fila => fila.id)) + 1
+  }
 }

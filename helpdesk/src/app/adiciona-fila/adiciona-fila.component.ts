@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FilaService } from '../fila.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-adiciona-fila',
@@ -9,17 +11,23 @@ export class AdicionaFilaComponent implements OnInit {
 
   //Atributo da classe que faz two-way-databing
   nomeFila: string;
-
-  constructor() { }
+ 
+  constructor(private filaService: FilaService, private lotacion: Location) { }
 
   ngOnInit() {
   }
 
   adicionaFila(): void{
     if(this.nomeFila){
-      window.alert('Fila Adicionada com Sucesso!');
+      this.filaService.adicionaFila({id: this.filaService.nextId(), nome: this.nomeFila});
+      //retornar para pagina anterior
+      this.lotacion.back();
     }else{
       window.alert('Você deve preencher o nome da fila!');
     }
+  }
+
+  voltar(): void {
+    this.lotacion.back();
   }
 }

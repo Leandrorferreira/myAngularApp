@@ -15,3 +15,9 @@
     width: 50%;
     height: 2em;
 }
+
+.botao-voltar {
+    float: right;
+    margin-top: .3em;
+    margin-right: .3em;
+}
