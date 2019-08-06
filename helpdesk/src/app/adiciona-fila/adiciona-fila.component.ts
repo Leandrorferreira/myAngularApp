@@ -15,4 +15,11 @@ export class AdicionaFilaComponent implements OnInit {
   ngOnInit() {
   }
 
+  adicionaFila(): void{
+    if(this.nomeFila){
+      window.alert('Fila Adicionada com Sucesso!');
+    }else{
+      window.alert('Você deve preencher o nome da fila!');
+    }
+  }
 }

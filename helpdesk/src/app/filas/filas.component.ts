@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FilaService } from '../fila.service';
+import { Fila } from '../model/fila';
 
 @Component({
   selector: 'app-filas',
@@ -6,20 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filas.component.css']
 })
 export class FilasComponent implements OnInit {
-  //Array de Objetos JavaScript (JSON) representando filas
-  filas = [
-    { id: 1, nome: 'Redes'},
-    { id: 2, nome: 'Telefonia'},
-    { id: 3, nome: 'Computadores'}    
-  ]
 
-  constructor() { }
+  filas: Fila [];
+  constructor(private filaService: FilaService) { 
+    this.filas = this.filaService.getFilas();
+  }
   
   ngOnInit() {
-  }  
-
-  //Metodo disparado pelo evento click no botão
-  adicionarFila(): void{
-    console.log('teste...');
-  }
+  }     
 }

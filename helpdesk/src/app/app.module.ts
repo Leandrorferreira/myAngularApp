@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { FilasComponent } from './filas/filas.component';
 import { AdicionaFilaComponent } from './adiciona-fila/adiciona-fila.component';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
