@@ -1,7 +1,10 @@
 <div class="container">
     <h1 class="titulo">Filas</h1>
     <ul class="filas">
-        <li *ngFor="let item of filas">{{ item.nome }}</li>  
+        <li (click)="onSelectFila(fila)" *ngFor="let fila of filas">{{ fila.nome }}</li>  
     </ul>
     <button routerLink="/adicionaFila" >Adicionar Fila</button>
 </div>
+<!-- Se atributo 'filaSelecionada' possuir uma fila, 
+    atribuir ao @Input [fila] do componente app-chamados a fila selecionada -->
+<app-chamados *ngIf="filaSelecionada" [fila]="filaSelecionada"></app-chamados>

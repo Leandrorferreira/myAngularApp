@@ -6,12 +6,14 @@ import { FilasComponent } from './filas/filas.component';
 import { AdicionaFilaComponent } from './adiciona-fila/adiciona-fila.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { ChamadosComponent } from './chamados/chamados.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilasComponent,
-    AdicionaFilaComponent
+    AdicionaFilaComponent,
+    ChamadosComponent
   ],
   imports: [
     BrowserModule,

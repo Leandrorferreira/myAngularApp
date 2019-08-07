@@ -1,0 +1,13 @@
+.container {
+    max-width: 50%;
+    text-align: center;
+}
+
+.titulo {
+    border-bottom:1px solid;
+}
+
+table {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
